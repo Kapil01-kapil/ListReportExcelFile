@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Dialog id="previewDialog" title="Excel Preview" draggable="true" resizable="true">
+    <Table items="{previewModel>/}" growing="true">
+      <columns>
+        <Column><Text text="ProductID"/></Column>
+        <Column><Text text="ProductName"/></Column>
+        <Column><Text text="UnitPrice"/></Column>
+        <Column><Text text="UnitsInStock"/></Column>
+      </columns>
+      <items>
+        <ColumnListItem>
+          <cells>
+            <Text text="{previewModel>ProductID}"/>
+            <Text text="{previewModel>ProductName}"/>
+            <Text text="{previewModel>UnitPrice}"/>
+            <Text text="{previewModel>UnitsInStock}"/>
+          </cells>
+        </ColumnListItem>
+      </items>
+    </Table>
+    <endButton>
+      <Button text="Close" press=".onClosePreview" />
+    </endButton>
+  </Dialog>
+</core:FragmentDefinition>

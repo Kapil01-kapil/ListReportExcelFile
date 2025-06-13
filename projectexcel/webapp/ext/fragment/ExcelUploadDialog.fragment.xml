@@ -1,0 +1,17 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core"
+  xmlns:u="sap.ui.unified">   <!-- ✅ Add this -->
+  <Dialog id="excelUploadDialog" title="Upload Excel File" draggable="true" resizable="true">
+    <VBox class="sapUiSmallMargin">
+     <u:FileUploader
+        id="excelUploader"
+        fileType="xlsx"
+        uploadOnChange="false"
+        change=".onExcelChange"
+        width="100%"
+        placeholder="Choose Excel File"/>
+    </VBox>
+    <beginButton>
+      <Button text="Close" press=".onCloseDialog" />
+    </beginButton>
+  </Dialog>
+</core:FragmentDefinition>
